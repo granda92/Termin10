@@ -20,4 +20,26 @@ public class Roba {
 
     @DatabaseField(columnName = POLJE_TEZINA, canBeNull = false)
     private  double tezina;
+
+    @DatabaseField(foreign = true, foreignAutoRefresh = true, canBeNull = false)
+    private Avion avion;
+
+    public Roba() {
+    }
+
+    public Roba(String naziv, String opis, double tezina) {
+        this.naziv = naziv;
+        this.opis = opis;
+        this.tezina = tezina;
+    }
+
+    @Override
+    public String toString() {
+        return "Roba{" +
+                "id=" + id +
+                ", naziv='" + naziv + '\'' +
+                ", opis='" + opis + '\'' +
+                ", tezina=" + tezina +
+                '}';
+    }
 }
