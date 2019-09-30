@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.j256.ormlite', name: 'ormlite-core', version: '5.0';
+    compile group: 'com.j256.ormlite', name: 'ormlitejbdc', version: '5.0';
+    compile group: 'org.xerial', name: 'sqlite-jbdc', version: '3.8.11.2';
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
