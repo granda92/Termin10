@@ -11,6 +11,7 @@ public class Zadatak3DodavanjeVrednosti {
 
         try {
             connectionSource = new JdbcConnectionSource(Konstante.DATABASE_URL);
+            
         } catch (SQLException e) {
             e.printStackTrace();
         }
